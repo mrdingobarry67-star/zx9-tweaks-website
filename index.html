@@ -1,131 +1,287 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b0b0e">
-  <meta name="description" content="ZX9 Tweaks — a Windows optimization toolkit for gamers. Coming soon.">
-  <title>ZX9 Tweaks | PC Performance</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="description" content="ZX9 Tweaks is a Windows PC toolkit for monitoring performance, exploring gaming and Windows tweaks, and personalizing your setup.">
+  <title>ZX9 Tweaks — Optimize your game. Own your performance.</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
 </head>
 <body>
-  <header class="header" id="top">
-    <a class="brand" href="#top"><span class="logo">ZX9</span> TWEAKS</a>
-    <button class="menu-toggle" id="menuToggle"
-      aria-expanded="false" aria-controls="nav">☰</button>
-    <nav id="nav">
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="ZX9 Tweaks home">
+      <span class="brand-mark" aria-hidden="true">Z</span>
+      <span>ZX9 <span class="brand-light">TWEAKS</span></span>
+    </a>
+    <nav aria-label="Main navigation">
       <a href="#features">Features</a>
-      <a href="#about">About</a>
-      <a class="nav-button" href="#download">Download</a>
+      <a href="#library">Roadmap</a>
+      <a href="#updates">Updates</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-download" href="#download">Download <span aria-hidden="true">↓</span></a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="eyebrow"><span class="dot"></span> WINDOWS OPTIMIZATION TOOLKIT</div>
-      <h1>YOUR PC.<br>YOUR RULES.<br><span>YOUR EDGE.</span></h1>
-      <p class="hero-text">
-        Take control of your Windows experience with organized tweaks,
-        gaming profiles, system insights, and recovery tools.
-      </p>
-      <div class="actions">
-        <a class="button primary" href="#download">Get ZX9 <span>↗</span></a>
-        <a class="button secondary" href="#features">Explore features</a>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> WINDOWS PERFORMANCE TOOLKIT <span class="beta">BETA</span></p>
+        <h1>Optimize your game.<br><span>Own your performance.</span></h1>
+        <p class="lead">A practical Windows toolkit for people who want to understand their PC and choose how it is configured.</p>
+        <div class="hero-actions">
+          <a class="button button-primary download-link is-disabled" href="#download" aria-disabled="true">
+            <span>Download for Windows</span><span aria-hidden="true">↓</span>
+          </a>
+          <a class="button button-secondary" href="#features">Explore features</a>
+        </div>
+        <p class="compatibility">Windows x64 · Compatibility testing in progress · Read the release notes before installing</p>
       </div>
-      <p class="small-note">Currently in development. Public release coming soon.</p>
-      <div class="hero-art" aria-hidden="true">
-        <div class="ring ring-one"></div>
-        <div class="ring ring-two"></div>
-        <div class="cube">ZX9</div>
-        <div class="art-caption">PERFORMANCE / CONTROL / PRECISION</div>
+      <div class="product-card" aria-label="ZX9 dashboard preview">
+        <div class="window-bar">
+          <span class="mini-brand"><span class="brand-mark small">Z</span> ZX9</span>
+          <span class="window-dots"><i></i><i></i><i></i></span>
+        </div>
+        <div class="preview-content">
+          <div class="preview-sidebar">
+            <span class="active"></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="preview-main">
+            <div class="preview-heading"><span>PC OVERVIEW</span><span class="preview-badge">SYSTEM STATUS</span></div>
+            <div class="metric-grid">
+              <div class="metric"><span>PROCESSOR</span><strong>Live metrics</strong><i class="meter"><b style="width: 58%"></b></i></div>
+              <div class="metric"><span>MEMORY</span><strong>Usage view</strong><i class="meter"><b style="width: 42%"></b></i></div>
+            </div>
+            <div class="preview-list">
+              <span><i></i> Windows and gaming settings</span>
+              <span><i></i> Profiles and activity history</span>
+              <span><i></i> Wallpaper and PC tools</span>
+            </div>
+          </div>
+        </div>
+        <p class="preview-caption">Interface preview · live readings depend on your PC</p>
       </div>
+    </section>
+
+    <section class="release-strip" aria-label="Release information">
+      <div><span class="strip-label">LATEST RELEASE</span><strong id="release-version">Preview build — public release not published</strong></div>
+      <div><span class="strip-label">RELEASE DATE</span><strong id="release-date">Not available yet</strong></div>
+      <a id="release-notes-link" href="#updates">Release notes <span aria-hidden="true">↗</span></a>
     </section>
 
     <section class="section" id="features">
-      <div class="section-title">
-        <p class="eyebrow">WHAT WE'RE BUILDING</p>
-        <h2>TOOLS BUILT FOR <span>CONTROL.</span></h2>
-        <p>A practical toolkit designed to make Windows settings easier to understand and manage.</p>
+      <div class="section-heading">
+        <p class="eyebrow">BUILT FOR CONTROL</p>
+        <h2>The essentials, in one place.</h2>
+        <p>ZX9 brings everyday PC information and configurable tools together without promising magic performance gains.</p>
       </div>
-
-      <div class="grid">
-        <article class="card">
-          <div class="icon">⌘</div>
-          <p class="card-number">01 / TWEAK CENTER</p>
-          <h3>Advanced Tweaks</h3>
-          <p>Explore categorized settings with descriptions, compatibility checks, and clear apply and restore actions.</p>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-number">01</span>
+          <div class="feature-icon" aria-hidden="true">◉</div>
+          <h3>Monitor your PC</h3>
+          <p>View live CPU and memory readings alongside system, storage, graphics, and network information.</p>
         </article>
-        <article class="card">
-          <div class="icon">◈</div>
-          <p class="card-number">02 / GAMING</p>
-          <h3>Gaming Profiles</h3>
-          <p>Plan separate configurations for competitive gaming, streaming, and everyday PC use.</p>
+        <article class="feature-card">
+          <span class="feature-number">02</span>
+          <div class="feature-icon" aria-hidden="true">⌁</div>
+          <h3>Review your tweaks</h3>
+          <p>Explore Windows and gaming options, see their status, and choose which supported changes to apply.</p>
         </article>
-        <article class="card">
-          <div class="icon">↻</div>
-          <p class="card-number">03 / RECOVERY</p>
-          <h3>Backup & Restore</h3>
-          <p>Keep a record of supported changes and provide recovery options when available.</p>
+        <article class="feature-card">
+          <span class="feature-number">03</span>
+          <div class="feature-icon" aria-hidden="true">◇</div>
+          <h3>Personalize your setup</h3>
+          <p>Keep local profiles, review activity, manage wallpapers, and use extra PC tools from one app.</p>
         </article>
-        <article class="card">
-          <div class="icon">▥</div>
-          <p class="card-number">04 / MONITORING</p>
-          <h3>System Insights</h3>
-          <p>Review system information, hardware usage, and compatibility to make informed decisions.</p>
-        </article>
-        <article class="card">
-          <div class="icon">⚡</div>
-          <p class="card-number">05 / CLEANUP</p>
-          <h3>System Cleanup</h3>
-          <p>Review temporary files and storage usage before confirming cleanup operations.</p>
-        </article>
-        <article class="card">
-          <div class="icon">✓</div>
-          <p class="card-number">06 / TRANSPARENCY</p>
-          <h3>Change History</h3>
-          <p>See which supported settings changed, what they do, and whether a restart is needed.</p>
+        <article class="feature-card">
+          <span class="feature-number">04</span>
+          <div class="feature-icon" aria-hidden="true">↻</div>
+          <h3>Update with approval</h3>
+          <p>ZX9 checks for a newer public release and asks before downloading and installing it.</p>
         </article>
       </div>
     </section>
 
-    <section class="about section" id="about">
-      <div>
-        <p class="eyebrow">THE ZX9 APPROACH</p>
-        <h2>LESS GUESSING.<br><span>MORE CONTROL.</span></h2>
+    <section class="section library-section" id="library">
+      <div class="section-heading">
+        <p class="eyebrow">PLANNED FEATURE LIBRARY</p>
+        <h2>A roadmap, not a promise.</h2>
+        <p>This is a design blueprint: <strong>18 categories · 565 planned entries.</strong> The entries below are examples of ideas only. They are not a list of features currently implemented in ZX9, and the remaining planned entries are not itemized here.</p>
       </div>
-      <div class="about-copy">
-        <p>ZX9 Tweaks is being developed for PC users who want a clear, organized way to inspect and manage Windows settings.</p>
-        <p>Our goal is to explain what each supported tweak changes instead of promising magic FPS gains. Results vary by hardware, games, and configuration.</p>
-        <div class="principles">
-          <p><span>01</span> Clear descriptions</p>
-          <p><span>02</span> Review before applying</p>
-          <p><span>03</span> Recovery wherever practical</p>
+      <div class="library-notice" role="note">
+        <span aria-hidden="true">i</span>
+        <p><strong>Planning status</strong> · The category totals describe possible future scope, not delivered Windows modifications. The current app catalog and implemented functionality remain separate from this roadmap.</p>
+      </div>
+      <div class="library-grid">
+        <details class="library-category">
+          <summary><span>Windows performance</span><b>45 planned</b></summary>
+          <ul><li>Visual effects presets</li><li>Animation controls</li><li>Transparency controls</li><li>Game Mode</li><li>Windowed game optimizations</li><li>Graphics preference manager</li><li>Background app review</li><li>Power plan selector</li><li>Startup impact viewer</li><li>Performance troubleshooting</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>CPU and processor</span><b>35 planned</b></summary>
+          <ul><li>Processor topology viewer</li><li>Logical processor detection</li><li>CPU utilization monitor</li><li>Core parking diagnostics</li><li>Power throttling status</li><li>Thermal status viewer</li><li>CPU benchmark launcher</li><li>Processor power policy review</li><li>Affinity inspection</li><li>CPU bottleneck analysis</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>GPU and NVIDIA</span><b>40 planned</b></summary>
+          <ul><li>NVIDIA driver version</li><li>GPU utilization monitor</li><li>GPU temperature monitor</li><li>Graphics preference manager</li><li>Hardware-accelerated GPU scheduling status</li><li>NVIDIA Control Panel shortcut</li><li>Shader cache settings review</li><li>Driver update checker</li><li>GPU benchmark launcher</li><li>Graphics API diagnostics</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>RAM and memory</span><b>30 planned</b></summary>
+          <ul><li>Memory usage monitor</li><li>Available memory</li><li>Commit usage</li><li>Paged pool monitor</li><li>Nonpaged pool monitor</li><li>Memory pressure alerts</li><li>Top memory-consuming apps</li><li>Page file status</li><li>Memory diagnostics launcher</li><li>Memory usage history</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>Mouse and keyboard</span><b>35 planned</b></summary>
+          <ul><li>Pointer acceleration settings</li><li>Pointer speed shortcut</li><li>Polling rate information</li><li>Mouse device viewer</li><li>Keyboard repeat delay</li><li>Keyboard repeat rate</li><li>USB device inspection</li><li>Gaming peripheral profiles</li><li>Input test utility</li><li>Device reconnect shortcut</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>Network and latency</span><b>35 planned</b></summary>
+          <ul><li>Ping test</li><li>Jitter test</li><li>Packet loss test</li><li>DNS lookup benchmark</li><li>Network adapter details</li><li>Link speed monitor</li><li>Wi-Fi signal diagnostics</li><li>Ethernet status</li><li>TCP configuration audit</li><li>Connection history</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>Fortnite and gaming</span><b>40 planned</b></summary>
+          <ul><li>Fortnite launch shortcut</li><li>Game process detection</li><li>Game configuration backup</li><li>Rendering mode checklist</li><li>Performance Mode checklist</li><li>FPS cap presets</li><li>Graphics preset manager</li><li>Game file verification shortcut</li><li>Replay settings review</li><li>Game launch arguments manager</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>Services and startup</span><b>35 planned</b></summary>
+          <ul><li>Startup app manager</li><li>Startup delay report</li><li>Scheduled task viewer</li><li>Service dependency viewer</li><li>Service startup audit</li><li>Background process review</li><li>Startup folder opener</li><li>Login task inventory</li><li>Resource-heavy startup report</li><li>Restore startup settings</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>Debloat and cleanup</span><b>35 planned</b></summary>
+          <ul><li>Temporary file cleanup</li><li>Recycle Bin cleanup</li><li>Thumbnail cache cleanup</li><li>DirectX shader cache cleanup</li><li>Browser cache review</li><li>Downloads folder analysis</li><li>Large file finder</li><li>Disk space analyzer</li><li>Old log cleanup</li><li>Cleanup preview and confirmation</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>Privacy and security</span><b>30 planned</b></summary>
+          <ul><li>Windows Security status</li><li>Firewall status</li><li>Defender status</li><li>Windows Update status</li><li>App permissions shortcut</li><li>Microphone permissions</li><li>Camera permissions</li><li>Diagnostic settings review</li><li>Secure Boot status</li><li>BitLocker status viewer</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>Drivers and devices</span><b>30 planned</b></summary>
+          <ul><li>GPU driver information</li><li>Audio driver information</li><li>Network driver information</li><li>Device Manager shortcut</li><li>Driver signature status</li><li>Unknown device detection</li><li>Driver backup inventory</li><li>Official driver download links</li><li>Driver installation checklist</li><li>Restart after installation</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>Power and thermals</span><b>25 planned</b></summary>
+          <ul><li>Power plan selector</li><li>Battery report shortcut</li><li>AC power detection</li><li>Thermal monitoring</li><li>Fan monitoring where supported</li><li>Power configuration audit</li><li>Sleep settings review</li><li>Display timeout controls</li><li>Hibernate settings review</li><li>Power profile restore</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>Storage and disk</span><b>25 planned</b></summary>
+          <ul><li>Drive health information</li><li>SMART status where supported</li><li>Free space monitor</li><li>Disk activity monitor</li><li>TRIM status</li><li>File system information</li><li>Drive optimization shortcut</li><li>Storage Sense settings</li><li>Partition viewer</li><li>Disk benchmark launcher</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>Diagnostics and benchmarking</span><b>30 planned</b></summary>
+          <ul><li>System information report</li><li>Windows build detection</li><li>CPU benchmark</li><li>GPU benchmark</li><li>Memory benchmark</li><li>Disk benchmark</li><li>Network benchmark</li><li>Frame-time log viewer</li><li>Crash log viewer</li><li>Before-and-after comparison</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>Backup and recovery</span><b>25 planned</b></summary>
+          <ul><li>Create restore point shortcut</li><li>Registry export before changes</li><li>Tweak change history</li><li>Undo last tweak</li><li>Restore saved profile</li><li>Export configuration</li><li>Import configuration</li><li>Recovery checklist</li><li>Administrator permission check</li><li>Rollback failure log</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>UI and personalization</span><b>25 planned</b></summary>
+          <ul><li>Black-and-red theme</li><li>Accent color picker</li><li>Sidebar customization</li><li>Compact dashboard</li><li>Animated metric cards</li><li>Custom app logo</li><li>Wallpaper selector</li><li>Font size controls</li><li>Reduced animation mode</li><li>Light and dark themes</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>Automation and profiles</span><b>25 planned</b></summary>
+          <ul><li>One-click safe optimization</li><li>Custom tweak bundles</li><li>Fortnite profile</li><li>Competitive gaming profile</li><li>Streaming profile</li><li>Everyday PC profile</li><li>Profile scheduler</li><li>Apply selected tweaks</li><li>Batch progress display</li><li>Profile reset</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+        <details class="library-category">
+          <summary><span>Advanced diagnostics</span><b>20 planned</b></summary>
+          <ul><li>Registry change audit</li><li>Policy setting inspector</li><li>System integrity scan</li><li>DISM repair shortcut</li><li>SFC repair shortcut</li><li>Event Viewer shortcut</li><li>Crash dump configuration review</li><li>Driver conflict report</li><li>Windows component health</li><li>Optimization recommendation engine</li></ul>
+          <p>Examples only. Remaining entries in this category could cover additional checks, variants, documentation, and controls.</p>
+        </details>
+      </div>
+      <p class="library-total">18 categories <span>·</span> 565 planned entries <span>·</span> blueprint only, not 565 implemented modifications</p>
+    </section>
+
+    <section class="section update-section" id="updates">
+      <div class="section-heading">
+        <p class="eyebrow">RELEASES &amp; CHANGELOG</p>
+        <h2>Know what you are installing.</h2>
+        <p id="release-summary" aria-live="polite">The first public release is being prepared. Version details and notes will appear here when published.</p>
+      </div>
+      <div class="release-card">
+        <div class="release-icon" aria-hidden="true">↗</div>
+        <div class="release-card-copy">
+          <strong id="update-title">No public release yet</strong>
+          <p id="update-detail">When a release is published, this page will show its version, date, download size, and release notes.</p>
         </div>
+        <a class="text-link repository-link" href="#community">All releases <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
     <section class="download-section" id="download">
+      <div class="download-copy">
+        <p class="eyebrow">ZX9 TWEAKS · WINDOWS x64</p>
+        <h2>Ready when the release is.</h2>
+        <p>Download links activate when the latest GitHub release includes the ZX9 Windows ZIP. Until then, the app is still in development and not ready for public installation.</p>
+        <div class="safety-note"><span aria-hidden="true">!</span><span>Review the release notes, back up important data, and create a Windows restore point before changing system settings. ZX9 should never ask you to disable Windows Defender or your firewall.</span></div>
+      </div>
       <div class="download-box">
-        <p class="eyebrow"><span class="dot"></span> PUBLIC RELEASE PENDING</p>
-        <h2>READY WHEN <span>YOU ARE.</span></h2>
-        <p>ZX9 Tweaks is still in development. We're not offering a public installer yet. Check back for release information and installation instructions.</p>
-        <span class="coming-soon"><span class="dot"></span> COMING SOON</span>
-        <p class="small-note">Don't download unofficial builds claiming to be ZX9 Tweaks.</p>
+        <div class="download-box-head"><span class="file-icon" aria-hidden="true">ZIP</span><span><strong>ZX9 for Windows</strong><small id="download-meta">First public build coming soon</small></span></div>
+        <a class="button button-primary download-link is-disabled" href="#download" aria-disabled="true">
+          <span>Download ZX9</span><span aria-hidden="true">↓</span>
+        </a>
+        <p class="small-note">64-bit Windows package · Details shown with each release</p>
+        <p class="small-note checksum" id="download-checksum" hidden></p>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="section-heading">
+        <p class="eyebrow">GOOD TO KNOW</p>
+        <h2>Before you install.</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Is ZX9 ready for public release?</summary>
+          <p>Not yet. ZX9 is still being built and tested. The download button will activate after a public release is published with a tested Windows package.</p>
+        </details>
+        <details>
+          <summary>Will ZX9 automatically change my PC?</summary>
+          <p>No. You choose which supported tweaks to apply. Read each option before using it, and create a restore point before changing Windows settings.</p>
+        </details>
+        <details>
+          <summary>How do I check for updates?</summary>
+          <p>This page checks the configured public GitHub repository for its latest release and displays its version, date, notes, and package link.</p>
+        </details>
+        <details>
+          <summary>Where does ZX9 save my app data?</summary>
+          <p>The current app stores its settings, profiles, activity history, tweak backups, and wallpaper preferences locally in your Windows user profile under <code>%LOCALAPPDATA%\\ZX9</code>. See the <a class="inline-link" href="privacy.html">privacy notice</a>.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="community-section" id="community">
+      <div><p class="eyebrow">COMMUNITY &amp; SUPPORT</p><h2>Follow the project.</h2><p>Find release notes, report a problem, or join the conversation on GitHub.</p></div>
+      <div class="community-links">
+        <a class="text-link repository-link" href="#community">GitHub repository <span aria-hidden="true">↗</span></a>
+        <a class="text-link discussions-link" href="#community">Ask a question / report a problem <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <a class="brand" href="#top"><span class="logo">ZX9</span> TWEAKS</a>
-    <p>Independent project. Not affiliated with Microsoft, NVIDIA, AMD, or Epic Games.</p>
-    <div class="footer-links">
-      <a href="#features">Features</a>
-      <a href="#download">Download</a>
-      <a href="#top">Back to top ↑</a>
-    </div>
-    <p class="copyright">© <span id="year"></span> ZX9 Tweaks</p>
+  <footer class="site-footer">
+    <a class="brand" href="#"><span class="brand-mark" aria-hidden="true">Z</span><span>ZX9 <span class="brand-light">TWEAKS</span></span></a>
+    <span>© <span id="year"></span> ZX9 Tweaks</span>
+    <a class="inline-link" href="privacy.html">Privacy</a>
   </footer>
 </body>
 </html>

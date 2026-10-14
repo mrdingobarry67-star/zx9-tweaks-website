@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="description" content="Privacy information for the ZX9 Tweaks website and Windows app.">
+  <title>Privacy — ZX9 Tweaks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">Z</span><span>ZX9 <span class="brand-light">TWEAKS</span></span></a>
+    <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#download">Download</a></nav>
+  </header>
+  <main class="section">
+    <div class="section-heading">
+      <p class="eyebrow">PRIVACY</p>
+      <h1>Privacy notice</h1>
+      <p>Last reviewed: October 2026. This notice describes the current ZX9 website and app; review it again whenever data practices change.</p>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>Website</summary>
+        <p>This static website does not currently use analytics, advertising trackers, or cookies. To display release information, it requests public release metadata from the configured GitHub repository. GitHub may receive standard connection information when your browser contacts its services.</p>
+      </details>
+      <details open>
+        <summary>ZX9 desktop app</summary>
+        <p>The current app saves preferences, profiles, activity history, tweak backups, and wallpaper settings locally under <code>%LOCALAPPDATA%\\ZX9</code>. The current code does not include an app analytics or telemetry upload feature. The optional Spotify wallpaper integration reads playback information from Windows media controls on your PC.</p>
+      </details>
+      <details open>
+        <summary>Windows settings and permissions</summary>
+        <p>Some app tools inspect system information or change Windows settings when you choose to apply a supported tweak. Review the description of each action, make a restore point before changing system settings, and keep Windows security protections enabled.</p>
+      </details>
+      <details open>
+        <summary>Questions and changes</summary>
+        <p>For privacy questions, use the project contact or support link listed on the <a class="inline-link" href="index.html#community">ZX9 website</a>. This notice should be updated if ZX9 adds online accounts, diagnostics uploads, analytics, or other data collection.</p>
+      </details>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">Z</span><span>ZX9 <span class="brand-light">TWEAKS</span></span></a>
+    <span>© <span id="year"></span> ZX9 Tweaks</span>
+    <a class="inline-link" href="index.html">Home</a>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
